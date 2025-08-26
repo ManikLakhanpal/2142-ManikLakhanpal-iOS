@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Aps-UO-rao">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="889-BZ-8sE">
+            <objects>
+                <navigationController id="Aps-UO-rao" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W51-sN-04W">
+                        <rect key="frame" x="0.0" y="118" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ysP-4a-dwN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HnF-oQ-NR1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-592" y="4"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="moodApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fjP-ze-dKL">
+                                <rect key="frame" x="20" y="360.66666666666669" width="353" height="130.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mood Meals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AqW-Qt-DuY">
+                                        <rect key="frame" x="45.666666666666686" y="0.0" width="262" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meals for every mood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxR-rK-JHl">
+                                        <rect key="frame" x="94.333333333333314" y="68" width="164.66666666666669" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qF5-un-W68">
+                                        <rect key="frame" x="146" y="96.333333333333314" width="61.333333333333343" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Start"/>
+                                        <connections>
+                                            <segue destination="Syp-Uj-JKr" kind="show" id="IVM-i5-wwx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fjP-ze-dKL" secondAttribute="trailing" constant="20" id="0Qs-NC-F6q"/>
+                            <constraint firstItem="fjP-ze-dKL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="An4-7v-6jB"/>
+                            <constraint firstItem="fjP-ze-dKL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HwV-Og-eT3"/>
+                            <constraint firstItem="fjP-ze-dKL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kw1-8T-2Cu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QpY-mt-f3P"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="147" y="4"/>
+        </scene>
+        <!--Moods View Controller-->
+        <scene sceneID="tCX-48-rB1">
+            <objects>
+                <viewController id="Syp-Uj-JKr" customClass="MoodsViewController" customModule="moodApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BOk-54-Su7">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WwS-Fv-E2k">
+                                <rect key="frame" x="20" y="162" width="353" height="276"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wxz-6e-e6Q">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="133"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xn5-QT-jh5">
+                                                <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="133"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9u-US-eCe">
+                                                        <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="104.66666666666667"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="tinted" title="😊">
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="65"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="moodButtons:" destination="Syp-Uj-JKr" eventType="touchUpInside" id="IXT-Ec-IHR"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happy" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYp-yZ-SmK">
+                                                        <rect key="frame" x="0.0" y="112.66666666666669" width="171.66666666666666" height="20.333333333333343"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FJX-YT-Kea">
+                                                <rect key="frame" x="181.66666666666663" y="0.0" width="171.33333333333337" height="133"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYq-jQ-Tp3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="171.33333333333334" height="104.66666666666667"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="tinted" title="😢">
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="65"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="moodButtons:" destination="Syp-Uj-JKr" eventType="touchUpInside" id="mUB-95-K3F"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sad" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFq-rS-bGF">
+                                                        <rect key="frame" x="0.0" y="112.66666666666669" width="171.33333333333334" height="20.333333333333343"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AQK-QT-fhA">
+                                        <rect key="frame" x="0.0" y="143" width="353" height="133"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0z1-QA-7Pf">
+                                                <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="133"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRA-LD-cjn">
+                                                        <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="104.66666666666667"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="tinted" title="😫">
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="65"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="moodButtons:" destination="Syp-Uj-JKr" eventType="touchUpInside" id="MWB-CO-UHu"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stressed" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukP-ga-ABq">
+                                                        <rect key="frame" x="0.0" y="112.66666666666669" width="171.66666666666666" height="20.333333333333343"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Irr-Tp-59k">
+                                                <rect key="frame" x="181.66666666666663" y="0.0" width="171.33333333333337" height="133"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reu-t0-5fR">
+                                                        <rect key="frame" x="0.0" y="0.0" width="171.33333333333334" height="104.66666666666667"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="tinted" title="⚡️">
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="65"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="moodButtons:" destination="Syp-Uj-JKr" eventType="touchUpInside" id="mUB-cx-42t"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Energetic" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5B8-15-gXQ">
+                                                        <rect key="frame" x="0.0" y="112.66666666666669" width="171.33333333333334" height="20.333333333333343"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kaF-rz-XTT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kaF-rz-XTT" firstAttribute="trailing" secondItem="WwS-Fv-E2k" secondAttribute="trailing" constant="20" id="hdg-9F-w9B"/>
+                            <constraint firstItem="WwS-Fv-E2k" firstAttribute="leading" secondItem="kaF-rz-XTT" secondAttribute="leading" constant="20" id="lJP-zU-xk6"/>
+                            <constraint firstItem="WwS-Fv-E2k" firstAttribute="top" secondItem="kaF-rz-XTT" secondAttribute="top" id="s9h-eD-kiN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cgr-pF-DHn"/>
+                    <connections>
+                        <segue destination="Qls-VB-ZQx" kind="show" identifier="Energy" destinationCreationSelector="EnergySegue:" id="0jg-GM-ZeJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JS8-sp-NsK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="894" y="4"/>
+        </scene>
+        <!--Energy View Controller-->
+        <scene sceneID="QQy-oV-475">
+            <objects>
+                <viewController id="Qls-VB-ZQx" customClass="EnergyViewController" customModule="moodApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LTb-Hn-2Rc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oiA-Ob-Sno">
+                                <rect key="frame" x="20" y="162" width="353" height="276"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="w6D-Ln-XaY">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="133"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sJd-1r-BCe">
+                                                <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="133"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5j-H4-g0c">
+                                                        <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="104.66666666666667"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="tinted" title="🪑">
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="65"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="energyButton:" destination="Qls-VB-ZQx" eventType="touchUpInside" id="oqM-gv-9Yt"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sedentary" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEh-AP-mIL">
+                                                        <rect key="frame" x="0.0" y="112.66666666666669" width="171.66666666666666" height="20.333333333333343"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2Vq-0u-Lv6">
+                                                <rect key="frame" x="181.66666666666663" y="0.0" width="171.33333333333337" height="133"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDR-Db-wL8">
+                                                        <rect key="frame" x="0.0" y="0.0" width="171.33333333333334" height="104.66666666666667"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="tinted" title="🚶‍♂️">
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="65"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="energyButton:" destination="Qls-VB-ZQx" eventType="touchUpInside" id="TJG-eZ-DgN"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEI-LB-nNt">
+                                                        <rect key="frame" x="0.0" y="112.66666666666669" width="171.33333333333334" height="20.333333333333343"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="c3b-l7-4IL">
+                                        <rect key="frame" x="0.0" y="143" width="353" height="133"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8sQ-N2-SRr">
+                                                <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="133"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0uL-Uu-Lkg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="104.66666666666667"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="tinted" title="🏃">
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="65"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="energyButton:" destination="Qls-VB-ZQx" eventType="touchUpInside" id="DMC-Qk-0wK"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moderate" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4R-iP-acG">
+                                                        <rect key="frame" x="0.0" y="112.66666666666669" width="171.66666666666666" height="20.333333333333343"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="J28-11-hxs">
+                                                <rect key="frame" x="181.66666666666663" y="0.0" width="171.33333333333337" height="133"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rp-az-jjq">
+                                                        <rect key="frame" x="0.0" y="0.0" width="171.33333333333334" height="104.66666666666667"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="tinted" title="🏋️‍♀️">
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="65"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="energyButton:" destination="Qls-VB-ZQx" eventType="touchUpInside" id="D26-D9-pVK"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intense" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHR-BD-JO9">
+                                                        <rect key="frame" x="0.0" y="112.66666666666669" width="171.33333333333334" height="20.333333333333343"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gmc-qU-lgz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oiA-Ob-Sno" firstAttribute="leading" secondItem="gmc-qU-lgz" secondAttribute="leading" constant="20" id="AN0-pn-q2T"/>
+                            <constraint firstItem="oiA-Ob-Sno" firstAttribute="top" secondItem="gmc-qU-lgz" secondAttribute="top" id="W8Z-28-Jrp"/>
+                            <constraint firstItem="gmc-qU-lgz" firstAttribute="trailing" secondItem="oiA-Ob-Sno" secondAttribute="trailing" constant="20" id="oiP-Pq-XWN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="T4M-Hw-Bug"/>
+                    <connections>
+                        <segue destination="HFh-vJ-Uub" kind="show" identifier="Result" destinationCreationSelector="ResultSegue:" id="KM0-RM-z2o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DR0-Qt-9bf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1631" y="4"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="eM7-VC-J9f">
+            <objects>
+                <viewController id="HFh-vJ-Uub" customClass="ResultViewController" customModule="moodApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mlr-xv-bFm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLu-DG-s3V">
+                                <rect key="frame" x="149.66666666666666" y="402" width="94" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GOL-zX-o98"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GOL-zX-o98" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gLu-DG-s3V" secondAttribute="trailing" id="Ksj-zx-LuT"/>
+                            <constraint firstItem="gLu-DG-s3V" firstAttribute="centerY" secondItem="mlr-xv-bFm" secondAttribute="centerY" id="LXx-qO-rlG"/>
+                            <constraint firstItem="gLu-DG-s3V" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GOL-zX-o98" secondAttribute="leading" id="M22-tk-0SK"/>
+                            <constraint firstItem="gLu-DG-s3V" firstAttribute="centerX" secondItem="mlr-xv-bFm" secondAttribute="centerX" id="ZtE-HI-0nC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="IAi-gd-1V5"/>
+                    <connections>
+                        <outlet property="ResultLabel" destination="gLu-DG-s3V" id="5Rm-iR-0rV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zAl-nB-1ES" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2349" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
